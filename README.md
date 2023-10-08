@@ -182,7 +182,7 @@ pub fn say_hello(name:String){
    Compiling napi-demo v0.0.1 (/Users/heige/web/rust/napi-in-action/napi-demo)
     Finished release [optimized] target(s) in 6.38s
 ```
-查看index.js发现已经新增了如下内容，表明新增的函数已经生效
+查看index.js发现已经新增了如下内容，表明新增的函数已经生效，该文件会根据不同的操作系统平台引入对应的.node文件。
 ```js
 const { sum, sayHello } = nativeBinding
 
@@ -209,7 +209,7 @@ console.log("1+2 = ",mymod.sum(1,2));
 mymod.sayHello("napi demo");
 ```
 执行如下命令，可以看到自定义的say_hello函数已经生效
-- rust生成后的函数，在nodejs中是遵循驼峰命令风格sayHello
+- rust生成后的函数，在nodejs中是遵循驼峰命名风格sayHello
 - 生成好的nodejs代码，放在index.js中
 
 运行效果：
