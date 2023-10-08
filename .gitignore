@@ -17,3 +17,4 @@ Cargo.lock
 logs
 *.log
 node_modules/*
+*.pdf
